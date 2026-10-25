@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tramutoli Art | Galleria & Atelier</title>
+  <title>Tramutoli Art | Galleria, Atelier & Spazio Culturale</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <a href="#" class="brand">Tramutoli <span>Art</span></a>
     <nav>
       <a href="#opere">Opere</a>
-      <a href="#poesie">Poesie</a>
+      <a href="#poesie">Poesie & Pensieri</a>
       <a href="#spazio">Spazio Eventi</a>
       <a href="#contatti">Contatti</a>
     </nav>
@@ -30,17 +30,17 @@
       <p class="section-desc">Selezione di opere tra oli su tela e tecniche miste.</p>
       
       <div class="gallery-grid" id="gallery-container">
-        <!-- Generato dinamicamente via JS -->
+        <!-- Verranno caricate qui automaticamente -->
       </div>
     </section>
 
-    <!-- Sezione Poesie -->
+    <!-- Sezione Poesie e Pensieri -->
     <section id="poesie" class="section">
-      <h2 class="section-title">Poesie</h2>
-      <p class="section-desc">Frammenti letterari e percorsi poetici.</p>
+      <h2 class="section-title">Poesie & Pensieri</h2>
+      <p class="section-desc">Versi, frammenti e visioni sulla pittura e sulla vita.</p>
       
       <div class="poetry-grid" id="poetry-container">
-        <!-- Spazio per le poesie -->
+        <!-- Verranno caricate qui automaticamente -->
       </div>
     </section>
 
@@ -58,94 +58,4 @@
 
   <footer id="contatti">
     <p>&copy; 2026 Tramutoli Art - Galleria & Atelier. Tutti i diritti riservati.</p>
-    <p style="margin-top: 0.5rem;">Contatti: aalfredo.tramutoli@gmail.com</p>
-  </footer>
-
-  <script>
-    const quadri = [
-      {"title": "BARCELONA", "dim": "135 x 145 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2300", "status": "Disponibile", "img": "BARCELONA.jpg"},
-      {"title": "ORO MILANO", "dim": "150 x 140 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2500", "status": "Disponibile", "img": "ORO-MILANO.jpg"},
-      {"title": "PUNTE INQUIETE", "dim": "117 x 106 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 2500", "status": "Disponibile", "img": "PONTE-IN-QUIETE.jpg"},
-      {"title": "NO WHERESOMEWHERE", "dim": "129 x 147 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 2500", "status": "Disponibile", "img": "NOWHERE-SOMEWHERE.jpg"},
-      {"title": "CORALLO", "dim": "130 x 116 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2700", "status": "Disponibile", "img": "CORALLO.jpg"},
-      {"title": "METAMORPHOSIS IV", "dim": "140 x 110 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2500", "status": "Disponibile", "img": "METAMORPHOSIS.jpg"},
-      {"title": "METAMORPHOSIS II", "dim": "115 x 95 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 1200", "status": "Disponibile", "img": "METAMORPHOSIS-II.jpg"},
-      {"title": "SQUARCIO ESEDRA", "dim": "117 x 107 cm", "tec": "Olio Su Tela", "year": "2018", "price": "€ 2500", "status": "Disponibile", "img": "SQUARCIO-ESEDRA.jpg"},
-      {"title": "ZODIACO", "dim": "80 x 80 cm", "tec": "Olio Su Tela", "year": "2022", "price": "€ 1100", "status": "Disponibile", "img": "ZODIACO_C.jpg"},
-      {"title": "PROMETEO", "dim": "140 x 150 cm", "tec": "Olio Su Tela", "year": "2022", "price": "€ 2800", "status": "Disponibile", "img": "PROMETEO.jpg"},
-      {"title": "LA MORTE DEL RE", "dim": "80 x 100 cm", "tec": "Olio Su Tela", "year": "2022", "price": "€ 1200", "status": "Disponibile", "img": "LA-MORTE-DEL-RE.jpg"},
-      {"title": "JOKER", "dim": "110 x 90 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1200", "status": "Disponibile", "img": "JOKER.jpg"},
-      {"title": "IL COMPLOTTO", "dim": "80 x 60 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 500", "status": "Disponibile", "img": "IL-COMPLOTTO.jpg"},
-      {"title": "WASHINGTON BRIDGE", "dim": "110 x 140 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1600", "status": "Disponibile", "img": "WASHINGTON-BRIDGE.jpg"},
-      {"title": "CROSSING NY", "dim": "110 x 140 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 1600", "status": "Disponibile", "img": "CROSSING-NY.jpg"},
-      {"title": "FLAT IRON", "dim": "55 x 75 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 800", "status": "Disponibile", "img": "FLAT-IRON.jpg"},
-      {"title": "TEMPO PERDUTO", "dim": "70 x 100 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 1100", "status": "Disponibile", "img": "TEMPO-PERDUTO.jpg"},
-      {"title": "GAZOMETRO", "dim": "135 x 152 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 2300", "status": "VENDUTO", "img": "GAZZON.jpg"},
-      {"title": "ERINNI", "dim": "180 x 140 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 4000", "status": "Disponibile", "img": "ERINNI.jpg"},
-      {"title": "MANHATTAN BRIDGE", "dim": "100 x 81 cm", "tec": "Olio Su Tela", "year": "2022", "price": "€ 1000", "status": "Disponibile", "img": "MANHATTAN-BRIDGE.jpg"},
-      {"title": "SOGNI PROIBITI", "dim": "181 x 115 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 3000", "status": "Disponibile", "img": "SOGNI-PROIBITI.jpg"},
-      {"title": "L'ATTESA", "dim": "115 x 106 cm", "tec": "Olio Su Tela", "year": "2017", "price": "", "status": "Collezione Privata", "img": "L_ATTESA.jpg"},
-      {"title": "PLUMES D'ETOILE", "dim": "110 x 112 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 2800", "status": "Disponibile", "img": "PLUMES-D_ETOILLE.jpg"},
-      {"title": "CIELO ROSA SU FORI IMPERIALI", "dim": "117 x 108 cm", "tec": "Olio Su Tela", "year": "2018", "price": "€ 2500", "status": "Disponibile", "img": "CIELO-ROSA-SU-FORI-IMPERIALI.jpg"},
-      {"title": "SOLEDAD", "dim": "115 x 110 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 1800", "status": "Disponibile", "img": "SOLEDAD.jpg"},
-      {"title": "MACKENZIE", "dim": "120 x 108 cm", "tec": "Olio Su Tela", "year": "2017", "price": "€ 2500", "status": "Disponibile", "img": "MACKENZIE.jpg"},
-      {"title": "EFESTO", "dim": "105 x 131 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1100", "status": "Disponibile", "img": "EFESTO.jpg"},
-      {"title": "AUTUNNO", "dim": "115 x 110 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1600", "status": "Disponibile", "img": "AUTUNNO.jpg"},
-      {"title": "QUIETE", "dim": "111 x 90 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1600", "status": "Disponibile", "img": "SOLITUDINE-RANDAGIA-I.jpg"},
-      {"title": "SOLITUDINE RANDAGIA", "dim": "89 x 75 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 900", "status": "Disponibile", "img": "SOLITUDINE-RANDAGIA-II.jpg"},
-      {"title": "LEIDENSCHAFT", "dim": "80 x 95 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 900", "status": "Disponibile", "img": "LEIDENSHAFT.jpg"},
-      {"title": "TIBER", "dim": "70 x 76 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 600", "status": "Disponibile", "img": "TIBER.jpg"},
-      {"title": "NAVONA MAGENTA", "dim": "59 x 68 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 600", "status": "Disponibile", "img": "NAVONA-MAGENTA.jpg"},
-      {"title": "SATINE", "dim": "80 x 60 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 600", "status": "Disponibile", "img": "SATINE.jpg"},
-      {"title": "ROMA SU CIELO DI PRAGA", "dim": "70 x 80 cm", "tec": "Olio Su Tela", "year": "2017", "price": "€ 800", "status": "Disponibile", "img": "ROMA-SU-CIELO-DI-PRAGA.jpg"},
-      {"title": "LUCIFERO", "dim": "110 x 90 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1800", "status": "Disponibile", "img": "LUCIFERO-1.jpg"},
-      {"title": "PIAZZA VENEZIA", "dim": "80 x 70 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 600", "status": "VENDUTO", "img": "PIAZZA-VENEZIA-2.jpg"},
-      {"title": "TIGRE", "dim": "80 x 110 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2300", "status": "Disponibile", "img": "TIGRE.jpg"},
-      {"title": "RED WATER VENICE", "dim": "140 x 135 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 2600", "status": "Disponibile", "img": "RED-WATER-VENICE.jpg"},
-      {"title": "LA PREMIERE", "dim": "153 x 133 cm", "tec": "Olio Su Tela", "year": "2019", "price": "", "status": "Disponibile", "img": "lapremiere_catalogo.jpg"},
-      {"title": "PIRAMIDE", "dim": "117 x 108 cm", "tec": "Olio Su Tela", "year": "2018", "price": "", "status": "VENDUTO", "img": "1666340580281.jpg"},
-      {"title": "VERTICAL REFLECTIONS", "dim": "107 x 117 cm", "tec": "Olio Su Tela", "year": "2019", "price": "", "status": "VENDUTO", "img": "vertical_reflections_catalogo.jpg"},
-      {"title": "BLUE YORK", "dim": "107 x 117 cm", "tec": "Olio Su Tela", "year": "2019", "price": "", "status": "VENDUTO", "img": "blueyork_catalogo.jpg"},
-      {"title": "NUIT CHEVEUX ET VIN ROUGE", "dim": "100 x 100 cm", "tec": "Olio Su Tela", "year": "2019", "price": "", "status": "VENDUTO", "img": "1666340580344.jpg"},
-      {"title": "POPOLO ARANCIO", "dim": "117 x 108 cm", "tec": "Olio Su Tela", "year": "2019", "price": "", "status": "VENDUTO", "img": "popoloarancio.jpg"},
-      {"title": "SAN PIETRO", "dim": "117 x 108 cm", "tec": "Olio Su Tela", "year": "2018", "price": "", "status": "VENDUTO", "img": "IMG_3173.jpg"},
-      {"title": "OLVIDAR", "dim": "180 x 145 cm", "tec": "Olio Su Tela", "year": "2022", "price": "€ 2000", "status": "Disponibile", "img": "OLIDAR.jpg"},
-      {"title": "RUST", "dim": "145 x 140 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 3000", "status": "Disponibile", "img": "rust_eeb047bb-a503-4587-b5f2-1fa421fe6d6f.jpg"},
-      {"title": "RED COPPER", "dim": "160 x 140 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 2200", "status": "Disponibile", "img": "red.jpg"},
-      {"title": "BLUE COPPER", "dim": "140 x 140 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 2200", "status": "Disponibile", "img": "blue.jpg"},
-      {"title": "STORMY RUST", "dim": "80 x 100 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 700", "status": "Disponibile", "img": "1758369844023.jpg"},
-      {"title": "TRIBAL", "dim": "220 x 150 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 2500", "status": "Disponibile", "img": "tribal.jpg"},
-      {"title": "RASH", "dim": "150 x 150 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 3000", "status": "Disponibile", "img": "rush.jpg"},
-      {"title": "PURPLE COPPER", "dim": "150 x 150 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 2200", "status": "Disponibile", "img": "1758370194496.jpg"},
-      {"title": "TURCHI", "dim": "160 x 150 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 2200", "status": "Disponibile", "img": "turkish.jpg"},
-      {"title": "GASOMETRO ROMA", "dim": "150 x 110 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 1800", "status": "Disponibile", "img": "gaz.jpg"},
-      {"title": "PETROLIO", "dim": "160 x 115 cm", "tec": "Tecnica Mista", "year": "2025", "price": "", "status": "Disponibile", "img": "1758370194577.jpg"},
-      {"title": "HEART", "dim": "160 x 115 cm", "tec": "Tecnica Mista", "year": "2025", "price": "", "status": "Disponibile", "img": "1758370194536.jpg"},
-      {"title": "PRIMITIVE", "dim": "225 x 145 cm", "tec": "Tecnica Mista", "year": "2025", "price": "", "status": "Disponibile", "img": "primitiv_d832cbf2-e4f4-4c83-bec2-45ac5ce9cd6b.jpg"},
-      {"title": "SHADOWS", "dim": "", "tec": "Tecnica Mista", "year": "2025", "price": "", "status": "Disponibile", "img": "shadows.jpg"},
-      {"title": "MILK", "dim": "85 x 85 cm", "tec": "Tecnica Mista", "year": "2025", "price": "", "status": "Disponibile", "img": "white.jpg"}
-    ];
-
-    const gallery = document.getElementById('gallery-container');
-    quadri.forEach(q => {
-      const card = document.createElement('div');
-      card.className = 'art-card';
-      
-      const imgSrc = q.img ? `img/opere/${q.img}` : 'img/placeholder.jpg';
-      const meta = [q.tec, q.dim, q.year].filter(Boolean).join(' • ');
-
-      card.innerHTML = `
-        <img src="${imgSrc}" alt="${q.title}" loading="lazy" onerror="this.src='https://placehold.co/600x450/1c1c20/a1a1a6?text=Opera'">
-        <div class="art-info">
-          <h3 class="art-title">${q.title}</h3>
-          <p class="art-meta">${meta}</p>
-          <p class="art-price">${q.price}</p>
-          <span class="art-status">${q.status}</span>
-        </div>
-      `;
-      gallery.appendChild(card);
-    });
-  </script>
-
-</body>
-</html>
+    <p style="margin-top: 0.5rem;">Contatti: aalfredo.tramutoli@gmail.com</p
