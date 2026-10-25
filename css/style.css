@@ -224,9 +224,10 @@ nav a:hover {
 .art-card img {
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
-  background-color: #242428;
+  object-fit: contain;
+  background-color: #18181b;
   display: block;
+  padding: 0.5rem;
 }
 
 .art-info {
