@@ -1,7 +1,11 @@
+/* ==========================================================================
+   TRAMUTOLI ART - STYLESHEET
+   ========================================================================== */
+
 :root {
   --bg-main: #121214;
   --bg-card: #1c1c20;
-  --bg-overlay: rgba(18, 18, 20, 0.95);
+  --bg-overlay: rgba(18, 18, 20, 0.98);
   --text-main: #f5f5f7;
   --text-muted: #a1a1a6;
   --accent-red: #d9383a;
@@ -29,36 +33,46 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Header a due livelli: barra logo su fascia chiara + barra navigazione scura */
 header {
   position: sticky;
   top: 0;
   background: var(--bg-overlay);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
-  padding: 1.2rem 2.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   z-index: 1000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-.brand {
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: var(--text-main);
-  text-decoration: none;
-  text-transform: uppercase;
+/* Striscia di risalto per il Logo (sfondo luminoso che fa risaltare nero e rosso) */
+.logo-strip {
+  background: #f7f7f9;
+  border-bottom: 2px solid var(--accent-red);
+  padding: 0.75rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.brand span {
-  color: var(--accent-red);
+.brand-logo {
+  height: 90px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--transition-speed);
 }
 
+.brand-logo:hover {
+  transform: scale(1.02);
+}
+
+/* Barra menu posizionata subito sotto la striscia */
 nav {
   display: flex;
-  gap: 1.8rem;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.85rem 1.5rem;
+  background: rgba(18, 18, 20, 0.95);
 }
 
 nav a {
@@ -66,6 +80,7 @@ nav a {
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
+  letter-spacing: 0.5px;
   transition: color var(--transition-speed);
 }
 
@@ -73,17 +88,18 @@ nav a:hover {
   color: var(--accent-red);
 }
 
+/* Copertina Hero */
 .hero {
-  padding: 5.5rem 1.5rem 3.5rem;
+  padding: 4.5rem 1.5rem 3rem;
   text-align: center;
   max-width: 850px;
   margin: 0 auto;
 }
 
 .hero h1 {
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   margin-bottom: 1rem;
 }
 
@@ -93,14 +109,15 @@ nav a:hover {
   line-height: 1.7;
 }
 
+/* Sezioni Base */
 .section {
-  padding: 4.5rem 1.5rem;
+  padding: 4rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .section-title {
-  font-size: 1.9rem;
+  font-size: 1.85rem;
   font-weight: 600;
   margin-bottom: 0.4rem;
   display: flex;
@@ -122,6 +139,48 @@ nav a:hover {
   margin-bottom: 2.5rem;
 }
 
+/* Riquadro Biografia e Sostenibilità */
+.bio-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  border-radius: 4px;
+  line-height: 1.8;
+  color: #d1d1d6;
+}
+
+.bio-box h3 {
+  color: var(--text-main);
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.bio-box p + p {
+  margin-top: 1rem;
+}
+
+.highlight-quote {
+  border-left: 3px solid var(--accent-red);
+  padding-left: 1.2rem;
+  font-style: italic;
+  color: #ffffff;
+  margin: 1.5rem 0;
+}
+
+.sustainability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(217, 56, 58, 0.12);
+  border: 1px solid var(--accent-red);
+  color: #ffffff;
+  padding: 0.45rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-top: 1.2rem;
+}
+
+/* Griglia Opere */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -170,11 +229,13 @@ nav a:hover {
   font-size: 0.85rem;
 }
 
+/* Campi Prezzo e Disponibilità (nascosti) */
 .art-price,
 .art-status {
   display: none;
 }
 
+/* Sezione Poesie */
 .poetry-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -203,6 +264,7 @@ nav a:hover {
   line-height: 1.8;
 }
 
+/* Spazio Eventi */
 .space-details {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -231,6 +293,7 @@ nav a:hover {
   background-color: var(--accent-hover);
 }
 
+/* Footer */
 footer {
   border-top: 1px solid var(--border-color);
   padding: 3rem 1.5rem;
@@ -244,14 +307,12 @@ footer p + p {
 }
 
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 0.9rem;
+  .brand-logo {
+    height: 65px;
   }
   nav {
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.2rem;
+    gap: 1rem;
   }
   .gallery-grid {
     grid-template-columns: 1fr;
