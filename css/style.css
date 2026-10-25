@@ -420,3 +420,93 @@ footer p + p {
     padding: 1.5rem;
   }
 }
+/* ==========================================================================
+   MODALE LIGHTBOX (INGRANDIMENTO OPERA AL CLIC)
+   ========================================================================== */
+
+/* Cursore a lente/manina sull'immagine */
+.art-card img {
+  cursor: zoom-in;
+}
+
+/* Finestra modale a schermo intero */
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  background-color: rgba(10, 10, 12, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.lightbox-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: zoomIn 0.25s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+}
+
+.lightbox-caption {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.lightbox-caption h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-main);
+  letter-spacing: 0.5px;
+}
+
+.lightbox-caption p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+}
+
+/* Pulsante di chiusura */
+.lightbox-close {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 2.2rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+  color: var(--accent-red);
+  transform: scale(1.15);
+}
