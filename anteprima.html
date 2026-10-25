@@ -257,9 +257,11 @@
   </div>
 
   <script>
-    /* Catalogo Opere con classificazione rigorosa */
+    /* Catalogo Opere aggiornato secondo la tua suddivisione esatta */
     const quadri = [
-      /* === PAESAGGI URBANI (CITYSCAPES & ARCHITETTURE) === */
+      /* ==========================================================================
+         PAESAGGI URBANI (CITYSCAPES & ARCHITETTURE)
+         ========================================================================== */
       {"title": "BARCELONA", "cat": "Paesaggi Urbani", "dim": "135 x 145 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2300", "status": "Disponibile", "img": "BARCELONA.jpg"},
       {"title": "ORO MILANO", "cat": "Paesaggi Urbani", "dim": "150 x 140 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2500", "status": "Disponibile", "img": "ORO-MILANO.jpg"},
       {"title": "SQUARCIO ESEDRA", "cat": "Paesaggi Urbani", "dim": "117 x 107 cm", "tec": "Olio Su Tela", "year": "2018", "price": "€ 2500", "status": "Disponibile", "img": "SQUARCIO-ESEDRA.jpg"},
@@ -279,53 +281,27 @@
       {"title": "SAN PIETRO", "cat": "Paesaggi Urbani", "dim": "117 x 108 cm", "tec": "Olio Su Tela", "year": "2018", "price": "", "status": "VENDUTO", "img": "IMG_3173.jpg"},
       {"title": "GASOMETRO ROMA", "cat": "Paesaggi Urbani", "dim": "150 x 110 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 1800", "status": "Disponibile", "img": "gaz.jpg"},
 
-      /* === FIGURATIVI (FIGURE UMANE, RITRATTI, MITI ED ELEMENTI VIVI) === */
+      /* ==========================================================================
+         FIGURATIVI (FIGURE, RITRATTI, MITI, SUGGESTIONI & OPERE FIGURATIVE)
+         ========================================================================== */
+      {"title": "PUNTE INQUIETE", "cat": "Figurativi", "dim": "117 x 106 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 2500", "status": "Disponibile", "img": "PONTE-IN-QUIETE.jpg"},
+      {"title": "METAMORPHOSIS IV", "cat": "Figurativi", "dim": "140 x 110 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2500", "status": "Disponibile", "img": "METAMORPHOSIS.jpg"},
+      {"title": "METAMORPHOSIS II", "cat": "Figurativi", "dim": "115 x 95 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 1200", "status": "Disponibile", "img": "METAMORPHOSIS-II.jpg"},
+      {"title": "TEMPO PERDUTO", "cat": "Figurativi", "dim": "70 x 100 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 1100", "status": "Disponibile", "img": "TEMPO-PERDUTO.jpg"},
+      {"title": "SOGNI PROIBITI", "cat": "Figurativi", "dim": "181 x 115 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 3000", "status": "Disponibile", "img": "SOGNI-PROIBITI.jpg"},
+      {"title": "PLUMES D'ETOILE", "cat": "Figurativi", "dim": "110 x 112 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 2800", "status": "Disponibile", "img": "PLUMES-D_ETOILLE.jpg"},
+      {"title": "QUIETE", "cat": "Figurativi", "dim": "111 x 90 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1600", "status": "Disponibile", "img": "SOLITUDINE-RANDAGIA-I.jpg"},
+      {"title": "SOLITUDINE RANDAGIA", "cat": "Figurativi", "dim": "89 x 75 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 900", "status": "Disponibile", "img": "SOLITUDINE-RANDAGIA-II.jpg"},
+      {"title": "LEIDENSCHAFT", "cat": "Figurativi", "dim": "80 x 95 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 900", "status": "Disponibile", "img": "LEIDENSHAFT.jpg"},
+      {"title": "LA PREMIERE", "cat": "Figurativi", "dim": "153 x 133 cm", "tec": "Olio Su Tela", "year": "2019", "price": "", "status": "Disponibile", "img": "lapremiere_catalogo.jpg"},
+      {"title": "OLVIDAR", "cat": "Figurativi", "dim": "180 x 145 cm", "tec": "Olio Su Tela", "year": "2022", "price": "€ 2000", "status": "Disponibile", "img": "OLIDAR.jpg"},
       {"title": "PROMETEO", "cat": "Figurativi", "dim": "140 x 150 cm", "tec": "Olio Su Tela", "year": "2022", "price": "€ 2800", "status": "Disponibile", "img": "PROMETEO.jpg"},
       {"title": "LA MORTE DEL RE", "cat": "Figurativi", "dim": "80 x 100 cm", "tec": "Olio Su Tela", "year": "2022", "price": "€ 1200", "status": "Disponibile", "img": "LA-MORTE-DEL-RE.jpg"},
       {"title": "JOKER", "cat": "Figurativi", "dim": "110 x 90 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1200", "status": "Disponibile", "img": "JOKER.jpg"},
       {"title": "ERINNI", "cat": "Figurativi", "dim": "180 x 140 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 4000", "status": "Disponibile", "img": "ERINNI.jpg"},
       {"title": "L'ATTESA", "cat": "Figurativi", "dim": "115 x 106 cm", "tec": "Olio Su Tela", "year": "2017", "price": "", "status": "Collezione Privata", "img": "L_ATTESA.jpg"},
       {"title": "SOLEDAD", "cat": "Figurativi", "dim": "115 x 110 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 1800", "status": "Disponibile", "img": "SOLEDAD.jpg"},
-      {"title": "MACKENZIE", "cat": "Figurativi", "dim": "120 x 108 cm", "tec": "Olio Su Tela", "year": "2017", "price": "€ 2500", "status": "Disponibile", "img": "MACKENZIE.jpg"},
-      {"title": "EFESTO", "cat": "Figurativi", "dim": "105 x 131 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1100", "status": "Disponibile", "img": "EFESTO.jpg"},
-      {"title": "AUTUNNO", "cat": "Figurativi", "dim": "115 x 110 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1600", "status": "Disponibile", "img": "AUTUNNO.jpg"},
-      {"title": "SATINE", "cat": "Figurativi", "dim": "80 x 60 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 600", "status": "Disponibile", "img": "SATINE.jpg"},
-      {"title": "LUCIFERO", "cat": "Figurativi", "dim": "110 x 90 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1800", "status": "Disponibile", "img": "LUCIFERO-1.jpg"},
-      {"title": "TIGRE", "cat": "Figurativi", "dim": "80 x 110 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2300", "status": "Disponibile", "img": "TIGRE.jpg"},
-      {"title": "NUIT CHEVEUX ET VIN ROUGE", "cat": "Figurativi", "dim": "100 x 100 cm", "tec": "Olio Su Tela", "year": "2019", "price": "", "status": "VENDUTO", "img": "1666340580344.jpg"},
-      {"title": "POPOLO ARANCIO", "cat": "Figurativi", "dim": "117 x 108 cm", "tec": "Olio Su Tela", "year": "2019", "price": "", "status": "VENDUTO", "img": "popoloarancio.jpg"},
-
-      /* === ASTRATTI (MATERIA PURA, METALLI, OSSIDAZIONI, METAMORFOSI) === */
-      {"title": "PUNTE INQUIETE", "cat": "Astratti", "dim": "117 x 106 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 2500", "status": "Disponibile", "img": "PONTE-IN-QUIETE.jpg"},
-      {"title": "NO WHERESOMEWHERE", "cat": "Astratti", "dim": "129 x 147 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 2500", "status": "Disponibile", "img": "NOWHERE-SOMEWHERE.jpg"},
-      {"title": "CORALLO", "cat": "Astratti", "dim": "130 x 116 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2700", "status": "Disponibile", "img": "CORALLO.jpg"},
-      {"title": "METAMORPHOSIS IV", "cat": "Astratti", "dim": "140 x 110 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2500", "status": "Disponibile", "img": "METAMORPHOSIS.jpg"},
-      {"title": "METAMORPHOSIS II", "cat": "Astratti", "dim": "115 x 95 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 1200", "status": "Disponibile", "img": "METAMORPHOSIS-II.jpg"},
-      {"title": "ZODIACO", "cat": "Astratti", "dim": "80 x 80 cm", "tec": "Olio Su Tela", "year": "2022", "price": "€ 1100", "status": "Disponibile", "img": "ZODIACO_C.jpg"},
-      {"title": "IL COMPLOTTO", "cat": "Astratti", "dim": "80 x 60 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 500", "status": "Disponibile", "img": "IL-COMPLOTTO.jpg"},
-      {"title": "TEMPO PERDUTO", "cat": "Astratti", "dim": "70 x 100 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 1100", "status": "Disponibile", "img": "TEMPO-PERDUTO.jpg"},
-      {"title": "SOGNI PROIBITI", "cat": "Astratti", "dim": "181 x 115 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 3000", "status": "Disponibile", "img": "SOGNI-PROIBITI.jpg"},
-      {"title": "PLUMES D'ETOILE", "cat": "Astratti", "dim": "110 x 112 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 2800", "status": "Disponibile", "img": "PLUMES-D_ETOILLE.jpg"},
-      {"title": "QUIETE", "cat": "Astratti", "dim": "111 x 90 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1600", "status": "Disponibile", "img": "SOLITUDINE-RANDAGIA-I.jpg"},
-      {"title": "SOLITUDINE RANDAGIA", "cat": "Astratti", "dim": "89 x 75 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 900", "status": "Disponibile", "img": "SOLITUDINE-RANDAGIA-II.jpg"},
-      {"title": "LEIDENSCHAFT", "cat": "Astratti", "dim": "80 x 95 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 900", "status": "Disponibile", "img": "LEIDENSHAFT.jpg"},
-      {"title": "LA PREMIERE", "cat": "Astratti", "dim": "153 x 133 cm", "tec": "Olio Su Tela", "year": "2019", "price": "", "status": "Disponibile", "img": "lapremiere_catalogo.jpg"},
-      {"title": "VERTICAL REFLECTIONS", "cat": "Astratti", "dim": "107 x 117 cm", "tec": "Olio Su Tela", "year": "2019", "price": "", "status": "VENDUTO", "img": "vertical_reflections_catalogo.jpg"},
-      {"title": "OLVIDAR", "cat": "Astratti", "dim": "180 x 145 cm", "tec": "Olio Su Tela", "year": "2022", "price": "€ 2000", "status": "Disponibile", "img": "OLIDAR.jpg"},
-      {"title": "RUST", "cat": "Astratti", "dim": "145 x 140 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 3000", "status": "Disponibile", "img": "rust_eeb047bb-a503-4587-b5f2-1fa421fe6d6f.jpg"},
-      {"title": "RED COPPER", "cat": "Astratti", "dim": "160 x 140 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 2200", "status": "Disponibile", "img": "red.jpg"},
-      {"title": "BLUE COPPER", "cat": "Astratti", "dim": "140 x 140 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 2200", "status": "Disponibile", "img": "blue.jpg"},
-      {"title": "STORMY RUST", "cat": "Astratti", "dim": "80 x 100 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 700", "status": "Disponibile", "img": "1758369844023.jpg"},
-      {"title": "TRIBAL", "cat": "Astratti", "dim": "220 x 150 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 2500", "status": "Disponibile", "img": "tribal.jpg"},
-      {"title": "RASH", "cat": "Astratti", "dim": "150 x 150 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 3000", "status": "Disponibile", "img": "rush.jpg"},
-      {"title": "PURPLE COPPER", "cat": "Astratti", "dim": "150 x 150 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 2200", "status": "Disponibile", "img": "1758370194496.jpg"},
-      {"title": "TURCHI", "cat": "Astratti", "dim": "160 x 150 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 2200", "status": "Disponibile", "img": "turkish.jpg"},
-      {"title": "PETROLIO", "cat": "Astratti", "dim": "160 x 115 cm", "tec": "Tecnica Mista", "year": "2025", "price": "", "status": "Disponibile", "img": "1758370194577.jpg"},
-      {"title": "HEART", "cat": "Astratti", "dim": "160 x 115 cm", "tec": "Tecnica Mista", "year": "2025", "price": "", "status": "Disponibile", "img": "1758370194536.jpg"},
-      {"title": "PRIMITIVE", "cat": "Astratti", "dim": "225 x 145 cm", "tec": "Tecnica Mista", "year": "2025", "price": "", "status": "Disponibile", "img": "primitiv_d832cbf2-e4f4-4c83-bec2-45ac5ce9cd6b.jpg"},
-      {"title": "SHADOWS", "cat": "Astratti", "dim": "", "tec": "Tecnica Mista", "year": "2025", "price": "", "status": "Disponibile", "img": "shadows.jpg"},
-      {"title": "MILK", "cat": "Astratti", "dim": "85 x 85 cm", "tec": "Tecnica Mista", "year": "2025", "price": "", "status": "Disponibile", "img": "white.jpg"}
-    ];
+      {"title": "
     /* Raccolta Poesie e Pensieri */
     const poesie = [
       {
