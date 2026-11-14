@@ -5,6 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tramutoli ArT Gallery | Alfredo Tramutoli</title>
   <link rel="stylesheet" href="css/style.css?v=5">
+  <style>
+    /* Stile Rullino Scorrevole Spazio Espositivo */
+    .venue-carousel-wrapper {
+      position: relative;
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .venue-carousel {
+      display: flex;
+      gap: 1.25rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      padding: 0.5rem 0.25rem;
+      scrollbar-width: none;
+    }
+
+    .venue-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .venue-carousel .venue-photo-card {
+      flex: 0 0 calc(50% - 0.65rem);
+      scroll-snap-align: start;
+      margin: 0;
+    }
+
+    .venue-carousel .venue-photo-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: rgba(18, 18, 20, 0.85);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .carousel-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-50%) scale(1.08);
+    }
+
+    .carousel-btn.prev { left: 10px; }
+    .carousel-btn.next { right: 10px; }
+
+    @media (max-width: 768px) {
+      .venue-carousel .venue-photo-card {
+        flex: 0 0 85%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -103,16 +172,30 @@
           La <strong>ArT Gallery</strong> riserva costantemente i propri ambienti all'accoglienza di progetti curatoriali indipendenti, mostre personali e collettive di altri artisti, reading, concerti d'autore e presentazioni. Uno spazio raccolto e metropolitano caratterizzato da parquet in legno naturale, illuminazione tecnica orientabile a binario e pareti allestibili per grandi formati.
         </p>
         
-        <!-- Foto dell'Atelier -->
-        <div class="venue-photos">
-          <div class="venue-photo-card">
-            <img src="img/GALL01.jpg" alt="Ingresso Atelier e Area Accoglienza Tramutoli Art">
-            <p>Atelier, vetrate su strada e area accoglienza</p>
+        <!-- Rullino Foto dell'Atelier -->
+        <div class="venue-carousel-wrapper">
+          <button class="carousel-btn prev" id="venue-prev" aria-label="Foto precedente">&#10094;</button>
+          
+          <div class="venue-carousel" id="venue-carousel">
+            <div class="venue-photo-card">
+              <img src="img/GALL01.jpg" alt="Ingresso Atelier e Area Accoglienza Tramutoli Art">
+              <p>Atelier, vetrate su strada e area accoglienza</p>
+            </div>
+            <div class="venue-photo-card">
+              <img src="img/GALL02.jpg" alt="Sala Espositiva Principale con faretti tecnici">
+              <p>Sala espositiva principale, pareti attrezzate e binari luce</p>
+            </div>
+            <div class="venue-photo-card">
+              <img src="img/GALL03.jpg" alt="Spazio Eventi e Allestimenti Tramutoli Art" onerror="this.parentElement.style.display='none'">
+              <p>Spazio eventi, vernissage e allestimenti</p>
+            </div>
+            <div class="venue-photo-card">
+              <img src="img/GALL04.jpg" alt="Prospettiva interna Atelier Tramutoli Art" onerror="this.parentElement.style.display='none'">
+              <p>Prospettiva interna e illuminazione tecnica</p>
+            </div>
           </div>
-          <div class="venue-photo-card">
-            <img src="img/GALL02.jpg" alt="Sala Espositiva Principale con faretti tecnici">
-            <p>Sala espositiva principale, pareti attrezzate e binari luce</p>
-          </div>
+
+          <button class="carousel-btn next" id="venue-next" aria-label="Foto successiva">&#10095;</button>
         </div>
 
         <!-- Cronologia Eventi e Mostre Ospitate -->
@@ -558,6 +641,32 @@
       `;
       poetryContainer.appendChild(pCard);
     });
+
+    /* Controllo Rullino Foto Galleria */
+    const venueCarousel = document.getElementById('venue-carousel');
+    const venuePrev = document.getElementById('venue-prev');
+    const venueNext = document.getElementById('venue-next');
+
+    if (venueCarousel && venuePrev && venueNext) {
+      venuePrev.addEventListener('click', () => {
+        venueCarousel.scrollBy({ left: -venueCarousel.clientWidth * 0.75, behavior: 'smooth' });
+      });
+
+      venueNext.addEventListener('click', () => {
+        venueCarousel.scrollBy({ left: venueCarousel.clientWidth * 0.75, behavior: 'smooth' });
+      });
+
+      venueCarousel.querySelectorAll('.venue-photo-card').forEach(card => {
+        const img = card.querySelector('img');
+        const caption = card.querySelector('p')?.textContent || '';
+        img.addEventListener('click', () => {
+          openLightbox(
+            { title: 'ArT Gallery – Via Cimone 72A', cat: 'Spazio Espositivo', tec: caption, dim: '', year: '' },
+            img.src
+          );
+        });
+      });
+    }
 
     // Inizializzazione: mostra tutte le opere e i ritratti
     renderGallery('all');
