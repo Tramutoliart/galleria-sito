@@ -1,4 +1,99 @@
-<!-- Sezione Unica: Spazio Espositivo & Cronologia Eventi -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tramutoli ArT Gallery | Alfredo Tramutoli</title>
+  <link rel="stylesheet" href="css/style.css?v=7">
+</head>
+<body>
+
+  <header>
+    <div class="logo-strip">
+      <a href="#">
+        <img src="img/LOGO-TRAMUTOLI.png" alt="ArT Gallery Alfredo Tramutoli" class="brand-logo">
+      </a>
+    </div>
+    <nav>
+      <a href="#autore">L'Autore & Alfie</a>
+      <a href="#opere">Opere</a>
+      <a href="#ritratti">Ritratti & Disegni</a>
+      <a href="#poesie">Poesie & Scritti</a>
+      <a href="#spazio">Spazio Eventi</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Spazio di Luce, Materia e Pensiero</h1>
+      <p>L'inizio e la fine di un'emozione da vivere al centro. Atelier di pittura, catalogo permanente e luogo aperto all'incontro culturale.</p>
+    </section>
+
+    <!-- Sezione Autore, Alfie & Sostenibilità -->
+    <section id="autore" class="section">
+      <h2 class="section-title">Il pittore & La Galleria</h2>
+      <p class="section-desc">Il demone creativo, il tempo ritrovato e l'equilibrio tra rigore e libertà.</p>
+
+      <div class="bio-box">
+        <h3>Il sogno di una Galleria d'Arte</h3>
+        <p>
+          Ho iniziato a dipingere dopo i trent’anni inseguendo un “demone” che doveva sfogarsi in qualche maniera: un affare privatissimo, non procrastinabile e non risolvibile in facili compromessi. Senza mentori, da autodidatta, con l'unico bisogno di trasmettere un sentimento autentico attraverso la materia pura.
+        </p>
+        <div class="highlight-quote">
+          «D'altronde, si dipinge con la propria solitudine e la propria fantasia: Pink Floyd nelle orecchie, un silenzioso whiskey e spazi bianchi da riempire o lasciare così, come pause necessarie tra i colori.»
+        </div>
+        <p>
+          Dentro di me palpitano da sempre due anime: da un lato la parte razionale, educata al rigore professionale, al rispetto delle regole, alla sostenibilità dei processi e alla precisione del fare; dall'altro lato c'è <strong>Alfie</strong>, il mio alter ego istintivo che rompe quegli schemi, che vede poesie a colori ovunque e che mi ricorda costantemente che <em>il vero valore oggi è il tempo che arricchisce l'anima</em>.
+        </p>
+        <p>
+          La <strong>ArT Gallery</strong> nasce da questo viaggio: ore di calce, cemento, polvere e mani sporche di fatica per strappare un luogo al tempo e trasformarlo in uno spazio etereo dove raccontarsi, condividere cultura e rigenerare lo spirito. Un impegno tangibile che sposa la sostenibilità non come etichetta, ma come cura della materia, salvaguardia del tempo umano e rispetto dell'ambiente che abitiamo.
+        </p>
+        <div class="sustainability-badge">
+          <span>🌿</span> Arte etica, riqualificazione degli spazi e cura della materia
+        </div>
+      </div>
+    </section>
+
+    <!-- Sezione Opere con i tre filtri -->
+    <section id="opere" class="section">
+      <h2 class="section-title">Opere Pittoriche</h2>
+      <p class="section-desc">Percorsi visivi divisi tra materia pura, indagine figurativa e architetture urbane.</p>
+      
+      <!-- Pulsanti delle 3 Categorie -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">Tutte le Opere</button>
+        <button class="filter-btn" data-filter="Astratti">Astratti</button>
+        <button class="filter-btn" data-filter="Figurativi">Figurativi</button>
+        <button class="filter-btn" data-filter="Paesaggi Urbani">Paesaggi Urbani</button>
+      </div>
+
+      <div class="gallery-grid" id="gallery-container">
+        <!-- Schede generate da JavaScript -->
+      </div>
+    </section>
+
+    <!-- Sezione Ritratti e Disegni -->
+    <section id="ritratti" class="section">
+      <h2 class="section-title">Ritratti & Disegni</h2>
+      <p class="section-desc">Studi su carta, tratti istintivi a grafite e carboncino e ritratti ad olio.</p>
+      
+      <div class="gallery-grid" id="portraits-container">
+        <!-- Schede generate da JavaScript -->
+      </div>
+    </section>
+
+    <!-- Sezione Poesie e Pensieri -->
+    <section id="poesie" class="section">
+      <h2 class="section-title">Poesie & Pensieri</h2>
+      <p class="section-desc">Raccolta completa di versi, aforismi e considerazioni intime sulla pittura.</p>
+      
+      <div class="poetry-grid" id="poetry-container">
+        <!-- Schede generate da JavaScript -->
+      </div>
+    </section>
+
+    <!-- Sezione Unica: Spazio Espositivo & Cronologia Eventi -->
     <section id="spazio" class="section">
       <h2 class="section-title">Spazio Espositivo & Atelier</h2>
       <p class="section-desc">Atelier permanente in Via Cimone 72A e spazio culturale per mostre terze, eventi editoriali e laboratori.</p>
@@ -185,3 +280,341 @@
         </div>
       </div>
     </section>
+  </main>
+
+  <footer id="contatti">
+    <p>&copy; 2026 Alfredo Tramutoli ArT Gallery - Tutti i diritti riservati.</p>
+    <p style="margin-top: 0.5rem;">Atelier & Spazio Espositivo: Via Cimone 72A - Roma | Email: Tramutoli.artgallery@gmail.com</p>
+  </footer>
+
+  <!-- Lightbox Ingrandimento a tutto schermo -->
+  <div id="lightbox" class="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Chiudi">&times;</button>
+      <img id="lightbox-img" class="lightbox-img" src="" alt="">
+      <div class="lightbox-caption">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-meta"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  /* Catalogo Opere con classificazione aggiornata */
+    const quadri = [
+      /* ==========================================================================
+         PAESAGGI URBANI (CITYSCAPES, CITTÀ & ARCHITETTURE)
+         ========================================================================== */
+      {"title": "NOWHERESOMEWHERE", "cat": "Paesaggi Urbani", "dim": "129 x 147 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 2500", "status": "Disponibile", "img": "NOWHERESOMEWHERE.jpg"},
+      {"title": "VERTICAL REFLECTIONS", "cat": "Paesaggi Urbani", "dim": "107 x 117 cm", "tec": "Olio Su Tela", "year": "2019", "price": "", "status": "VENDUTO", "img": "vertical_reflections_catalogo.jpg"},
+      {"title": "BARCELONA", "cat": "Paesaggi Urbani", "dim": "135 x 145 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2300", "status": "Disponibile", "img": "BARCELONA.jpg"},
+      {"title": "ORO MILANO", "cat": "Paesaggi Urbani", "dim": "150 x 140 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2500", "status": "Disponibile", "img": "ORO MILANO.jpg"},
+      {"title": "SQUARCIO ESEDRA", "cat": "Paesaggi Urbani", "dim": "117 x 107 cm", "tec": "Olio Su Tela", "year": "2018", "price": "€ 2500", "status": "Disponibile", "img": "SQUARCIO-ESEDRA.jpg"},
+      {"title": "WASHINGTON BRIDGE", "cat": "Paesaggi Urbani", "dim": "110 x 140 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1600", "status": "Disponibile", "img": "WASHINGTON-BRIDGE.jpg"},
+      {"title": "CROSSING NY", "cat": "Paesaggi Urbani", "dim": "110 x 140 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 1600", "status": "Disponibile", "img": "CROSSING NY.jpg"},
+      {"title": "FLAT IRON", "cat": "Paesaggi Urbani", "dim": "55 x 75 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 800", "status": "Disponibile", "img": "FLATIRON.jpg"},
+      {"title": "GAZOMETRO", "cat": "Paesaggi Urbani", "dim": "135 x 152 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 2300", "status": "VENDUTO", "img": "GAZZON.jpg"},
+      {"title": "MANHATTAN BRIDGE", "cat": "Paesaggi Urbani", "dim": "100 x 81 cm", "tec": "Olio Su Tela", "year": "2022", "price": "€ 1000", "status": "Disponibile", "img": "MANHATTAN-BRIDGE.jpg"},
+      {"title": "CIELO ROSA SU FORI IMPERIALI", "cat": "Paesaggi Urbani", "dim": "117 x 108 cm", "tec": "Olio Su Tela", "year": "2018", "price": "€ 2500", "status": "Disponibile", "img": "CIELO-ROSA-SU-FORI-IMPERIALI.jpg"},
+      {"title": "TIBER", "cat": "Paesaggi Urbani", "dim": "70 x 76 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 600", "status": "Disponibile", "img": "TIBER.jpg"},
+      {"title": "NAVONA MAGENTA", "cat": "Paesaggi Urbani", "dim": "59 x 68 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 600", "status": "Disponibile", "img": "NAVONA-MAGENTA.jpg"},
+      {"title": "ROMA SU CIELO DI PRAGA", "cat": "Paesaggi Urbani", "dim": "70 x 80 cm", "tec": "Olio Su Tela", "year": "2017", "price": "€ 800", "status": "Disponibile", "img": "ROMA-SU-CIELO-DI-PRAGA.jpg"},
+      {"title": "PIAZZA VENEZIA", "cat": "Paesaggi Urbani", "dim": "80 x 70 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 600", "status": "VENDUTO", "img": "PIAZZA-VENEZIA-2.jpg"},
+      {"title": "RED WATER VENICE", "cat": "Paesaggi Urbani", "dim": "140 x 135 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 2600", "status": "Disponibile", "img": "RED-WATER-VENICE.jpg"},
+      {"title": "PIRAMIDE", "cat": "Paesaggi Urbani", "dim": "117 x 108 cm", "tec": "Olio Su Tela", "year": "2018", "price": "", "status": "VENDUTO", "img": "PIRAMIDE.jpg"},
+      {"title": "BLUE YORK", "cat": "Paesaggi Urbani", "dim": "107 x 117 cm", "tec": "Olio Su Tela", "year": "2019", "price": "", "status": "VENDUTO", "img": "blueyork_catalogo.jpg"},
+      {"title": "SAN PIETRO", "cat": "Paesaggi Urbani", "dim": "117 x 108 cm", "tec": "Olio Su Tela", "year": "2018", "price": "", "status": "VENDUTO", "img": "SANPIETRO.jpg"},
+      {"title": "GAZOMETRO ROMA", "cat": "Paesaggi Urbani", "dim": "150 x 110 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 1800", "status": "Disponibile", "img": "gaz.jpg"},
+      {"title": "ZODIACO", "cat": "Paesaggi Urbani", "dim": "80 x 80 cm", "tec": "Olio Su Tela", "year": "2022", "price": "€ 1100", "status": "Disponibile", "img": "ZODIACO_C.jpg"},
+      {"title": "OLVIDAR", "cat": "Paesaggi Urbani", "dim": "180 x 145 cm", "tec": "Olio Su Tela", "year": "2022", "price": "€ 2000", "status": "Disponibile", "img": "OLVIDAR.jpg"},
+
+      /* ==========================================================================
+         FIGURATIVI (FIGURE, RITRATTI, CORALLO, COMPLOTTO, MITI & SUGGESTIONI)
+         ========================================================================== */
+      {"title": "IL COMPLOTTO", "cat": "Figurativi", "dim": "80 x 60 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 500", "status": "Disponibile", "img": "IL-COMPLOTTO.jpg"},
+      {"title": "CORALLO", "cat": "Figurativi", "dim": "130 x 116 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2700", "status": "Disponibile", "img": "CORALLO.jpg"},
+      {"title": "PUNTE INQUIETE", "cat": "Figurativi", "dim": "117 x 106 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 2500", "status": "Disponibile", "img": "PUNTE-IN-QUIETE.jpg"},
+      {"title": "METAMORPHOSIS IV", "cat": "Figurativi", "dim": "140 x 110 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2500", "status": "Disponibile", "img": "METAMORPHOSIS.jpg"},
+      {"title": "METAMORPHOSIS II", "cat": "Figurativi", "dim": "115 x 95 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 1200", "status": "Disponibile", "img": "METAMORPHOSIS-II.jpg"},
+      {"title": "TEMPO PERDUTO", "cat": "Figurativi", "dim": "70 x 100 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 1100", "status": "Disponibile", "img": "TEMPO-PERDUTO.jpg"},
+      {"title": "SOGNI PROIBITI", "cat": "Figurativi", "dim": "181 x 115 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 3000", "status": "Disponibile", "img": "SOGNI-PROIBITI.jpg"},
+      {"title": "PLUMES D'ETOILE", "cat": "Figurativi", "dim": "110 x 112 cm", "tec": "Olio Su Tela", "year": "2019", "price": "€ 2800", "status": "Disponibile", "img": "PLUMES-D_ETOILLE.jpg"},
+      {"title": "QUIETE", "cat": "Figurativi", "dim": "111 x 90 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1600", "status": "Disponibile", "img": "SOLITUDINE-RANDAGIA-I.jpg"},
+      {"title": "SOLITUDINE RANDAGIA", "cat": "Figurativi", "dim": "89 x 75 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 900", "status": "Disponibile", "img": "SOLITUDINE-RANDAGIA-II.jpg"},
+      {"title": "LEIDENSCHAFT", "cat": "Figurativi", "dim": "80 x 95 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 900", "status": "Disponibile", "img": "LEIDENSHAFT.jpg"},
+      {"title": "LA PREMIERE", "cat": "Figurativi", "dim": "153 x 133 cm", "tec": "Olio Su Tela", "year": "2019", "price": "", "status": "Disponibile", "img": "lapremiere_catalogo.jpg"},
+      {"title": "PROMETEO", "cat": "Figurativi", "dim": "140 x 150 cm", "tec": "Olio Su Tela", "year": "2022", "price": "€ 2800", "status": "Disponibile", "img": "PROMETEO.jpg"},
+      {"title": "LA MORTE DEL RE", "cat": "Figurativi", "dim": "80 x 100 cm", "tec": "Olio Su Tela", "year": "2022", "price": "€ 1200", "status": "Disponibile", "img": "LA-MORTE-DEL-RE.jpg"},
+      {"title": "JOKER", "cat": "Figurativi", "dim": "110 x 90 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1200", "status": "Disponibile", "img": "JOKER.jpg"},
+      {"title": "ERINNI", "cat": "Figurativi", "dim": "180 x 140 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 4000", "status": "Disponibile", "img": "ERINNI.jpg"},
+      {"title": "L'ATTESA", "cat": "Figurativi", "dim": "115 x 106 cm", "tec": "Olio Su Tela", "year": "2017", "price": "", "status": "Collezione Privata", "img": "L_ATTESA.jpg"},
+      {"title": "SOLEDAD", "cat": "Figurativi", "dim": "115 x 110 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 1800", "status": "Disponibile", "img": "SOLEDAD.jpg"},
+      {"title": "MACKENZIE", "cat": "Figurativi", "dim": "120 x 108 cm", "tec": "Olio Su Tela", "year": "2017", "price": "€ 2500", "status": "Disponibile", "img": "MACKENZIE.jpg"},
+      {"title": "EFESTO", "cat": "Figurativi", "dim": "105 x 131 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1100", "status": "Disponibile", "img": "EFESTO.jpg"},
+      {"title": "AUTUNNO", "cat": "Figurativi", "dim": "115 x 110 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1600", "status": "Disponibile", "img": "AUTUNNO.jpg"},
+      {"title": "SATINE", "cat": "Figurativi", "dim": "80 x 60 cm", "tec": "Olio Su Tela", "year": "2021", "price": "€ 600", "status": "Disponibile", "img": "SATINE.jpg"},
+      {"title": "LUCIFERO", "cat": "Figurativi", "dim": "110 x 90 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 1800", "status": "Disponibile", "img": "LUCIFERO-1.jpg"},
+      {"title": "TIGRE", "cat": "Figurativi", "dim": "80 x 110 cm", "tec": "Olio Su Tela", "year": "2020", "price": "€ 2300", "status": "Disponibile", "img": "TIGRE.jpg"},
+      {"title": "NUIT CHEVEUX ET VIN ROUGE", "cat": "Figurativi", "dim": "100 x 100 cm", "tec": "Olio Su Tela", "year": "2019", "price": "", "status": "VENDUTO", "img": "NOTTEVINO.jpg"},
+      {"title": "POPOLO ARANCIO", "cat": "Figurativi", "dim": "117 x 108 cm", "tec": "Olio Su Tela", "year": "2019", "price": "", "status": "VENDUTO", "img": "popoloarancio.jpg"},
+
+      /* ==========================================================================
+         ASTRATTI (MATERIA PURA, RUGGINI, RAME, METALLI, OSSIDAZIONI)
+         ========================================================================== */
+      {"title": "RUST", "cat": "Astratti", "dim": "145 x 140 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 3000", "status": "Disponibile", "img": "RUST.jpg"},
+      {"title": "RED COPPER", "cat": "Astratti", "dim": "160 x 140 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 2200", "status": "Disponibile", "img": "red.jpg"},
+      {"title": "BLUE COPPER", "cat": "Astratti", "dim": "140 x 140 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 2200", "status": "Disponibile", "img": "blue.jpg"},
+      {"title": "STORMY RUST", "cat": "Astratti", "dim": "80 x 100 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 700", "status": "Disponibile", "img": "STORMY_RUST.jpg"},
+      {"title": "TRIBAL", "cat": "Astratti", "dim": "150 x 220 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 2500", "status": "Disponibile", "img": "tribal.jpg"},
+      {"title": "RASH", "cat": "Astratti", "dim": "150 x 150 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 3000", "status": "Disponibile", "img": "rush.jpg"},
+      {"title": "PURPLE COPPER", "cat": "Astratti", "dim": "150 x 150 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 2200", "status": "Disponibile", "img": "PURPLE COPPER.jpg"},
+      {"title": "TURCHI", "cat": "Astratti", "dim": "160 x 150 cm", "tec": "Tecnica Mista", "year": "2024", "price": "€ 2200", "status": "Disponibile", "img": "turkish.jpg"},
+      {"title": "PETROLIO", "cat": "Astratti", "dim": "115 x 160 cm", "tec": "Tecnica Mista", "year": "2025", "price": "", "status": "Disponibile", "img": "PETROLIO.jpg"},
+      {"title": "FUELFLOYD", "cat": "Astratti", "dim": "100 x 100 cm", "tec": "Tecnica Mista", "year": "2026", "price": "", "status": "Disponibile", "img": "FUELFLOYD.jpg"},
+      {"title": "PURPLENET", "cat": "Astratti", "dim": "115 x 160 cm", "tec": "Tecnica Mista", "year": "2026", "price": "", "status": "Disponibile", "img": "PURPLENET.jpg"},
+      {"title": "HEART", "cat": "Astratti", "dim": "115 x 160 cm", "tec": "Tecnica Mista", "year": "2025", "price": "", "status": "Disponibile", "img": "HEART.jpg"},
+      {"title": "PRIMITIVE", "cat": "Astratti", "dim": "145 x 225 cm", "tec": "Tecnica Mista", "year": "2025", "price": "", "status": "Disponibile", "img": "PRIMITIVE.jpg"},
+      {"title": "SHADOWS", "cat": "Astratti", "dim": "", "tec": "Tecnica Mista", "year": "2025", "price": "", "status": "Disponibile", "img": "shadows.jpg"},
+      {"title": "MILK", "cat": "Astratti", "dim": "85 x 85 cm", "tec": "Tecnica Mista", "year": "2025", "price": "", "status": "Disponibile", "img": "MILK.jpg"}
+    ];
+
+    /* ==========================================================================
+       CATALOGO RITRATTI & DISEGNI
+       ========================================================================== */
+    const ritratti = [
+      { "title": "RITRATTO I", "cat": "Ritratti & Disegni", "dim": "", "tec": "Matita / Carboncino", "year": "", "price": "", "status": "", "img": "ritratto_01.jpg" },
+      { "title": "RITRATTO II", "cat": "Ritratti & Disegni", "dim": "", "tec": "Matita / Carboncino", "year": "", "price": "", "status": "", "img": "ritratto_02.jpg" },
+      { "title": "RITRATTO III", "cat": "Ritratti & Disegni", "dim": "", "tec": "Matita / Carboncino", "year": "", "price": "", "status": "", "img": "ritratto_03.jpg" },
+      { "title": "RITRATTO IV", "cat": "Ritratti & Disegni", "dim": "", "tec": "Matita / Carboncino", "year": "", "price": "", "status": "", "img": "ritratto_04.jpg" },
+      { "title": "RITRATTO V", "cat": "Ritratti & Disegni", "dim": "", "tec": "Matita / Carboncino", "year": "", "price": "", "status": "", "img": "ritratto_05.jpg" },
+      { "title": "RITRATTO VI", "cat": "Ritratti & Disegni", "dim": "", "tec": "Olio Su Tela", "year": "", "price": "", "status": "", "img": "ritratto_06.jpg" },
+      { "title": "RITRATTO VII", "cat": "Ritratti & Disegni", "dim": "", "tec": "Olio Su Tela", "year": "", "price": "", "status": "", "img": "ritratto_07.jpg" },
+      { "title": "GAIA", "cat": "Ritratti & Disegni", "dim": "", "tec": "Olio Su Tela", "year": "", "price": "", "status": "", "img": "ritratto_gaia.jpg" },
+      { "title": "MELROSE", "cat": "Ritratti & Disegni", "dim": "", "tec": "Olio Su Tela", "year": "", "price": "", "status": "", "img": "ritratto_Melrose.jpg" },
+      { "title": "REMBRANDT", "cat": "Ritratti & Disegni", "dim": "", "tec": "Olio Su Tela", "year": "", "price": "", "status": "", "img": "ritratto_rembrandt.jpg" }
+    ];
+
+    /* Raccolta Poesie e Pensieri */
+    const poesie = [
+      {
+        "title": "Se non fossi timido te lo direi",
+        "text": "Se non fossi timido te lo direi.\nVorrei che tu non fossi così bella.\nNon riesco a morire un po' di meno quando evito di guardarti.\n\nLascia allora che qualcuno ti rubi quella grazia.\nTrafughi svelto, la delicatezza dei tuoi movimenti, prima che siano loro, rapidi, a rubare il mio respiro.\nCosì forse non ci sarebbe più.\nDileguerebbe questo cuore che ubriaco sbatte fra i muri nel vicolo del mio petto.\n\nE so che non troverà uscita e la parola non avrà più sfogo.\nResterà qui. Sulle labbra del mio silenzio.\n\n\"Ma a che pensi?\", sorridi.\nSe non fossi così timido te lo direi."
+      },
+      {
+        "title": "Solo per me",
+        "text": "Quella rondine tutta per me?\nnon amerei la libertà.\nGli alberi, trasformerei in sbarre, e labirinti le strade, se ti avessi mia, per questa follia.\nNel guscio di una noce non va il mare; eppure spalanco gli occhi, per averti di più.\nSolo per me.\nChe sia un unico granello dell'infinita spiaggia nella clessidra del tempo.\n\nMa tu sei già passata, nero lampo.\nE stridi mille dei miei ricordi. Mille dei miei capricci.\nMa sì... ti legherei le ali!! Mille nodi!!\nE immobile ti avrei già persa. Mille volte presa. Mille volte persa.\n\nNon sei per me. Perché in fondo appartieni al cielo.\nAppartieni a chi sa volare con te. Ed io non ho ali.\nE un po' di più so chi sono, perché anche tu non puoi fermare quello che sei, come me.\nE se mi volessi con te, solo per te, non ameresti la mia libertà, ed io...io non amerei le rondini."
+      },
+      {
+        "title": "Sulla perfezione",
+        "text": "Non mi piace la perfezione. La perfezione è noiosa.\nTroppi dettagli cancellano l'emozione.\nI quadri fototessera li lascio alle questure per i passaporti.\n\nPer me un ritratto che ti suggerisce un'emozione o ti stupisce con un'espressione del volto che si era \"nascosta\" nella foto, è vera pittura.\nE se poi ti continua ad emozionare nel tempo, beh amico mio: per me, quella è arte!"
+      },
+      {
+        "title": "Sul dettaglio",
+        "text": "L'occhio focalizza un dettaglio alla volta, perché è la vista che porta a ragione quell'insieme dei dettagli che chiamiamo realtà.\nOgnuno vede la realtà, la propria, a seconda del dettaglio su cui il suo occhio si vuole concentrare in quel momento.\n\nProva, allora, a fissare un vaso. Non saprai che fiori sono, perché hanno lo stelo alto. Se continui a concentrarti sul vaso, puoi contare gli steli ma non potrai vederne il dettaglio dei loro petali, la goccia tonda d'acqua più in alto a sinistra.\nEppure, quella macchia di colore rosso lassù, confusa e bellissima, ti suggerirà che sono rose.\n\nNella sfocatura, allora, in tutto quello che circonda confusamente il dettaglio, per me, proprio lì, si sprigiona l'essenza di un quadro."
+      },
+      {
+        "title": "Sugli sbagli",
+        "text": "Ed è, a volte, in quel \"difetto perfetto\" che trovo il senso più palpitante di un quadro.\nCosì capita nella pennellata sbagliata di aver sprigionato tutta l'emozione di una tela."
+      },
+      {
+        "title": "Inerme e pura",
+        "text": "Inerme e pura, analfabeta nel mio futuro, maestra del mio passato, scorsa tra dita avide, luccicante di passione, amara di distacco, impregnata di me, scalciante su di me.\n\nMantello invisibile ti posi sulla mia pelle, sanguigna nostalgia.\nDolci sorrisi fuggiti, palpiti sospesi, lacrime sale, amore e male, malinconia che brucia l'anima.\n\nSogno guardandomi indietro, distruggo impietoso voltandomi all'orizzonte.\nSono di qualcuno che non conosco. Sono nello specchio di chi vorrei essere. Sono di chi mi tende sempre una mano incosciente. Sono di chi mi giustifica come mano indulgente.\n\nInerme e puro. Analfabeta di vita. Amaro di distacco, palpitante giaccio.\nImpalpabile ormai il mio respiro. Svanito in nebbie azzurre. Luoghi stranieri in cui non tornerò. Tempo che non più vivrò."
+      },
+      {
+        "title": "Il Mare",
+        "text": "Non amerai il mare perché diventa cristallo in cieli azzurri.\nNon amerai il mare di spiagge bianche e palme immobili.\n\nQuello che solo il tuo sguardo può nuotare, quello in cui potrai affogare continuando a respirare, Tu amerai.\nSarai fatta di inverno e scure rocce per sentirlo.\nInghiottirai spuma grigia e vortici neri per fare risacca sui tuoi indomiti pensieri.\n\nNon gabbiano che vola sulle onde verdi, ma di pietra abisso sarai plasmata.\nE sentirai allora, Anima mia, il mare.\nMare che amerai per sempre."
+      },
+      {
+        "title": "Lo specchio del tempo",
+        "text": "Il passato è un grande specchio che mi riflette ogni giorno.\nUno specchio che ricorda mentre io dimentico.\nE anche il mondo passato intorno sembra dimenticato.\nMa tutto è stato riflesso nel suo grande specchio. E lo specchio del mondo è il cielo.\n\nIl passato è un libro scritto che non si può rileggere."
+      },
+      {
+        "title": "L'alba e il tramonto",
+        "text": "Non ci sarà mai alba che eguaglierà il più tenue tramonto.\nOgni tramonto avrà il fascino di una notte che ogni alba aspetta impazientemente di ascoltare."
+      },
+      {
+        "title": "Marlboro",
+        "text": "L'amicizia è amore. L'amore è follia.\nBisogna essere folli per trovare un vero amico.\nCi sono addii, ci sono ritorni. Dolori lunghi incompresi. Separazioni senza scadenza.\nPoi ci sono abbracci di occhi scintillanti che scavano nell'anima.\n\nDobbiamo riappropriarci del tempo. Dobbiamo vivere. Inimitabili. Inimmaginabili.\nHo sentito me, ho sentito te, amico mio. Dove? In due follie unite, due smanie separate, due strade diverse non più tracciate sul mappamondo ma le uniche visibili sul nostro stradario.\n\nUn pensiero per Marlboro, l'unico con cui vorrei essere sulla strada. La nostra."
+      },
+      {
+        "title": "Lungo il Tevere",
+        "text": "È stato sul lungotevere mentre il sole tramonta tra arcobaleni di nuvole distese sull'orizzonte.\nÈ stato mentre sfogliavo le foto di quando ero bambino.\nÈ stato quando ho capito che non potevo più farci niente. Quando ho sperato che l'asse del tempo si muovesse in avanti al mio primo sorriso sincero.\nQuando ho sentito le ruote che mi scivolavano via e l'asfalto duro contro le mani aperte. In quel gusto spavento ruggine in bocca.\nMa tutte le volte sono come non ricordo più.\n\nAlfie... è solo il tempo che passa. È che non te ne accorgi. Vorresti che fosse diverso. E ogni volta è uguale.\nPassa la voglia. Si spengono le fiamme nel camino.\nSituazioni ripetute nel traffico dei minuti, sbattono le persiane della mia vita e lascio tutto com'è.\nSono solo e la mia gran voglia di vivere è una mongolfiera, sospesa immobile sopra le nuvole dove non c'è vento."
+      },
+      {
+        "title": "La soglia della follia",
+        "text": "Un passo avanti alla mia follia ho trovato il mio coraggio.\nSpinta la mia solitudine da sponde fangose, fiondata inerme su pianure di lago in nebbie calme.\nQuanto dista il cielo dalla mia anima quando impotenti i miei movimenti fluttuano?\n\nAnaconda sono sceso alla radice della mia percezione fino a voler smettere di percepire.\nCome acqua che gorgoglia di docili remi ascolto cadenzate ansime dal mio petto. Traghetto vuoto il corpo dove l'assoluto mi espande larghi petali di pace.\n\nUn passo indietro al mio coraggio allora scorgo me.\nLampo che squarcia querce. Nera così forte, eppure fragile.\nLuce che di tenebre mi bagni. Soffio che prosciughi dentro oceani. Lacrima che spacca montagna. Oblio fatto di sogni.\n\nDimentica soffrendo nuovi dolori. Dolcezza inquieta che insegna amarezza. Fermento che bolle. Solo.\nCapire vorrei forse l'amore come lo spiega la pioggia quando azzurro fa scomparire il cielo."
+      },
+      {
+        "title": "Caos a caso",
+        "text": "C'è un giorno in cui sorridi all'ultima battuta, saluti e vai via.\nE nessuno può aspettarsi che è l'ultimo di tantissimi giorni trascorsi insieme.\nE dopo tanti anni lontani, cerco di ricordarmelo quando è stato quel giorno con te, ma non ci riesco.\nE forse è meglio così. Per chi resta è ancora più doloroso avere la certezza che quel ricordo era in realtà un addio.\n\nLa vita è caos. Caos a caso."
+      },
+      {
+        "title": "Il silenzio delle iridi",
+        "text": "Mi annoia discutere di cose che non mi interessano.\nE preferisco, in genere, il non parlato alle parole che, spesso, se non si sanno usare, diventano troppe, incomplete, nel peggiore dei casi incomprese o ahimè sentite.\n\nSono già negli occhi altrui le risposte che vorrei avere alle mie domande.\nLe più belle parole sono quelle celate dalle iridi del tuo silenzio."
+      },
+      {
+        "title": "Sulle strisce pedonali della vita",
+        "text": "Tiriamo i dadi, perché restare fermi non si può.\nSiamo sulle strisce pedonali della vita."
+      },
+      {
+        "title": "Lucciole e parole",
+        "text": "Lucciolano parole davanti ai miei pensieri.\nRagno le tesso in un sogno.\nFluttuo così su un oceano fatto di anime profonde."
+      }
+    ];
+
+    /* Rendering Galleria Dinamica */
+    const gallery = document.getElementById('gallery-container');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+
+    function renderGallery(categoria) {
+      gallery.innerHTML = '';
+      const filtrate = (categoria === 'all') 
+        ? quadri 
+        : quadri.filter(q => q.cat === categoria);
+
+      filtrate.forEach(q => {
+        const card = document.createElement('div');
+        card.className = 'art-card';
+        
+        const imgSrc = q.img ? `img/opere/${q.img}` : 'img/placeholder.jpg';
+        const meta = [q.tec, q.dim, q.year].filter(Boolean).join(' • ');
+
+        card.innerHTML = `
+          <img src="${imgSrc}" alt="${q.title}" loading="lazy" onerror="this.src='https://placehold.co/600x450/1c1c20/a1a1a6?text=Opera'">
+          <div class="art-info">
+            <span class="art-category">${q.cat}</span>
+            <h3 class="art-title">${q.title}</h3>
+            <p class="art-meta">${meta}</p>
+            <p class="art-price">${q.price}</p>
+            <span class="art-status">${q.status}</span>
+          </div>
+        `;
+
+        // Ingrandimento opera al clic
+        const imgEl = card.querySelector('img');
+        imgEl.addEventListener('click', () => {
+          openLightbox(q, imgSrc);
+        });
+
+        gallery.appendChild(card);
+      });
+    }
+
+    /* Rendering Sezione Ritratti & Disegni */
+    const portraitsContainer = document.getElementById('portraits-container');
+
+    function renderPortraits() {
+      if (!portraitsContainer) return;
+      portraitsContainer.innerHTML = '';
+
+      ritratti.forEach(r => {
+        const card = document.createElement('div');
+        card.className = 'art-card';
+        
+        const imgSrc = r.img ? `img/ritratti/${r.img}` : 'img/placeholder.jpg';
+        const meta = [r.tec, r.dim, r.year].filter(Boolean).join(' • ');
+
+        card.innerHTML = `
+          <img src="${imgSrc}" alt="${r.title}" loading="lazy" onerror="this.src='https://placehold.co/600x450/1c1c20/a1a1a6?text=Ritratto'">
+          <div class="art-info">
+            <span class="art-category">${r.cat}</span>
+            <h3 class="art-title">${r.title}</h3>
+            <p class="art-meta">${meta}</p>
+            ${r.price ? `<p class="art-price">${r.price}</p>` : ''}
+            ${r.status ? `<span class="art-status">${r.status}</span>` : ''}
+          </div>
+        `;
+
+        const imgEl = card.querySelector('img');
+        imgEl.addEventListener('click', () => {
+          openLightbox(r, imgSrc);
+        });
+
+        portraitsContainer.appendChild(card);
+      });
+    }
+
+    /* Eventi Click sui Filtri */
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderGallery(btn.dataset.filter);
+      });
+    });
+
+    /* Lightbox Modal */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxMeta = document.getElementById('lightbox-meta');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    function openLightbox(q, imgSrc) {
+      lightboxImg.src = imgSrc;
+      lightboxImg.alt = q.title;
+      lightboxTitle.textContent = q.title;
+      lightboxMeta.textContent = `${q.cat} • ` + [q.tec, q.dim, q.year].filter(Boolean).join(' • ');
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      lightboxImg.src = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+    });
+
+    /* Rendering Poesie */
+    const poetryContainer = document.getElementById('poetry-container');
+    poesie.forEach(p => {
+      const pCard = document.createElement('article');
+      pCard.className = 'poetry-card';
+      pCard.innerHTML = `
+        <h3>${p.title}</h3>
+        <p>${p.text}</p>
+      `;
+      poetryContainer.appendChild(pCard);
+    });
+
+    /* Controllo Rullino Foto Galleria */
+    const venueCarousel = document.getElementById('venue-carousel');
+    const venuePrev = document.getElementById('venue-prev');
+    const venueNext = document.getElementById('venue-next');
+
+    if (venueCarousel && venuePrev && venueNext) {
+      venuePrev.addEventListener('click', () => {
+        venueCarousel.scrollBy({ left: -venueCarousel.clientWidth * 0.75, behavior: 'smooth' });
+      });
+
+      venueNext.addEventListener('click', () => {
+        venueCarousel.scrollBy({ left: venueCarousel.clientWidth * 0.75, behavior: 'smooth' });
+      });
+
+      venueCarousel.querySelectorAll('.venue-photo-card').forEach(card => {
+        const img = card.querySelector('img');
+        const caption = card.querySelector('p')?.textContent || '';
+        img.addEventListener('click', () => {
+          openLightbox(
+            { title: 'ArT Gallery – Via Cimone 72A', cat: 'Spazio Espositivo', tec: caption, dim: '', year: '' },
+            img.src
+          );
+        });
+      });
+    }
+
+    // Inizializzazione: mostra tutte le opere e i ritratti
+    renderGallery('all');
+    renderPortraits();
+  </script>
+
+</body>
+</html>
